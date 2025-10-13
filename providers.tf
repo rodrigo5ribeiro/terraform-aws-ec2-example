@@ -8,11 +8,8 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "lp-codeforall-terraform-state-232138"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
-    encrypt = true
+  backend "local" {
+    path = "terraform.tfstate"
   }
 }
 
