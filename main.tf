@@ -21,6 +21,6 @@ resource "aws_security_group" "allow_ssh" {
 
 module "ec2_instance" {
   source        = "./modules/ec2-instance"
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
   security_group_ids = [aws_security_group.allow_ssh.id]
 }
